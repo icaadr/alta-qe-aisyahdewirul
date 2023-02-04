@@ -1,0 +1,5 @@
+org\example\pageObject\LandingPage.class
+org\example\pageObject\LoginPage.class
+org\example\pageObject\CheckoutInfoPage.class
+org\example\pageObject\CheckoutOverviewPage.class
+org\example\pageObject\CartPage.class

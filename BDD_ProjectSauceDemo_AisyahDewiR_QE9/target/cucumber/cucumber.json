@@ -1,0 +1,212 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 5177335200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "User make a purchase with 2 item",
+        "description": "",
+        "id": "sales-flow;user-make-a-purchase-with-2-item",
+        "after": [
+          {
+            "result": {
+              "duration": 809992600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 319202000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User open the website sauce demo",
+            "match": {
+              "location": "LoginSteps.verifyLogin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 504810600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User input \"standard_user\" as userName and input \"secret_sauce\" as password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "standard_user",
+                  "offset": 12
+                },
+                {
+                  "val": "secret_sauce",
+                  "offset": 50
+                }
+              ],
+              "location": "LoginSteps.inputCredential(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 89957400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User already on landing page",
+            "match": {
+              "location": "PurchaseSteps.verifyLandingPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3183879000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User sort product list by \"Name (Z to A)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Name (Z to A)",
+                  "offset": 27
+                }
+              ],
+              "location": "PurchaseSteps.sortProductValue(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2120579900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User choice 2 products from the list",
+            "match": {
+              "location": "PurchaseSteps.choiceProduct()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2124087200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User return to page chart",
+            "match": {
+              "location": "PurchaseSteps.openCart()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9208680300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User already on checkout page",
+            "match": {
+              "location": "CheckoutSteps.verifyYourCartPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 20570128600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User input \"Aisyah\" as userFirst and input \"DewiRulyadi\" as last and input \"123\" as zip",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Aisyah",
+                  "offset": 12
+                },
+                {
+                  "val": "DewiRulyadi",
+                  "offset": 44
+                },
+                {
+                  "val": "123",
+                  "offset": 76
+                }
+              ],
+              "location": "CheckoutSteps.inputCredential(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2104017300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User ensure the item total and tax",
+            "match": {
+              "location": "CheckoutOverviewSteps.verifyYourCartList()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2077395100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "User ensure the total price after sum with the tax",
+            "match": {
+              "location": "CheckoutOverviewSteps.verifyTotalPrice()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4120613500,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User Has Completed the Checkout Order",
+            "match": {
+              "location": "CheckoutOverviewSteps.verifyCheckoutOrderPage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Sales flow",
+    "description": "description Class",
+    "id": "sales-flow",
+    "keyword": "Feature",
+    "uri": "features/Sales.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Sales"
+      }
+    ]
+  }
+]
